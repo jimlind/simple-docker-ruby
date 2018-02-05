@@ -1,3 +1,5 @@
 #!/bin/sh
-docker build -t simple-docker-ruby .
-docker run -t -w /src simple-docker-ruby sh -c "ruby print.rb"
+name="simple-docker-ruby"
+
+docker build -t $name .
+docker run -t -w /src $name sh -c "ruby print.rb"
